@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BlogList({ blogList, author }) {
+function BlogList({ blogList, author, DeleteBlog }) {
     return (
         <div>
             <h1>Author: {author}</h1>
@@ -10,6 +10,7 @@ function BlogList({ blogList, author }) {
                         <h3>Title: {blog.title}</h3>
                         <i>Author: {blog.author}</i>
                         <p>Description: {blog.desc}</p>
+                        <button onClick={() => DeleteBlog(blog.id)}>Delete</button>
                     </div>
                 )
             })}
