@@ -11,7 +11,8 @@ function BlogData() {
     ])
     // delete blog fn
     const DeleteBlog = (id) => {
-        
+        const newBlogList = blogs.filter(blog => blog.id != id)
+        setBlogs(newBlogList)
     }
     return (
         <div>
