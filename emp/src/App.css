@@ -33,6 +33,11 @@ table {
 td {
   border: 1px solid rgb(23, 127, 179);
 }
+.blogList {
+  margin: 5px;
+  border: 1px solid rgb(13, 121, 87);
+  border-radius: 18px;
+}
 
 @keyframes App-logo-spin {
   from {
