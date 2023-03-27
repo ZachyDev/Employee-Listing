@@ -6,7 +6,7 @@ function App() {
   const course = 'React Js'
   return (
     <div className="App">
-      <AppHeader title="Developers Africa" course={course}/>
+      <AppHeader title="Developers Africa" />
       <BlogData />
     </div>
   );

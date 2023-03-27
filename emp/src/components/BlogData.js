@@ -11,7 +11,8 @@ function BlogData() {
     ])
     return (
         <div>
-            <BlogList blogList={blogs} />
+            <BlogList blogList={blogs} author="Author is Zachy"/>
+            <BlogList blogList={blogs} author="Author is Tech G"/>
         </div>
     )
 }
