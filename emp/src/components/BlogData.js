@@ -11,8 +11,8 @@ function BlogData() {
     ])
     return (
         <div>
-            <BlogList blogList={blogs} author="Author is Zachy"/>
-            <BlogList blogList={blogs} author="Author is Tech G"/>
+            <BlogList blogList={blogs.filter(item => item.author==='rishan')} author="Author is Rishan"/>
+            <BlogList blogList={blogs.filter(item=> item.author==='jhon')} author="Author is Jhon"/>
         </div>
     )
 }
