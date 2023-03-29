@@ -10,7 +10,7 @@ function BlogList({ blogList, author, DeleteFn }) {
                         <h3>Title: {blog.title}</h3>
                         <i>Author: {blog.author}</i>
                         <p>Description: {blog.desc}</p>
-                        <button onClick={DeleteFn(blog.id)}>Delete</button>
+                        <button onClick={() => DeleteFn(blog.id)}>Delete</button>
                     </div>
                 )
             })}

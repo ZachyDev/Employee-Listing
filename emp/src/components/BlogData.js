@@ -10,11 +10,16 @@ function BlogData() {
         { 'id': '5', 'title': 'sql', 'desc': 'this content described about Sql', 'author': 'rishan' }
     ])
     // delete blog fn
+    const DeleteFn = id => {
+        const newBlogList = blogs.filter(blog=> blog.id != id);
+        setBlogs(newBlogList);
+    }
+    
     
     return (
         <div>
-            <BlogList blogList={blogs.filter(item => item.author === 'rishan')} author="Author is Rishan" DeleteBlog={DeleteBlog} />
-            <BlogList blogList={blogs.filter(item => item.author === 'jhon')} author="Author is Jhon" DeleteBlog={DeleteBlog} />
+            <BlogList blogList={blogs.filter(item => item.author === 'rishan')} author="Author is Rishan" DeleteFn={DeleteFn} />
+            <BlogList blogList={blogs.filter(item => item.author === 'jhon')} author="Author is Jhon" DeleteFn={DeleteFn} />
         </div>
     )
 }
