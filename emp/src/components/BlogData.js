@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import BlogList from './BlogList'
 
 function BlogData() {
@@ -11,11 +11,13 @@ function BlogData() {
     ])
     // delete blog fn
     const DeleteFn = id => {
-        const newBlogList = blogs.filter(blog=> blog.id != id);
+        const newBlogList = blogs.filter(blog=> blog.id !== id);
         setBlogs(newBlogList);
     }
     
-    
+    useEffect(() => {
+        console.log('use effect')
+    })
     return (
         <div>
             <BlogList blogList={blogs.filter(item => item.author === 'rishan')} author="Author is Rishan" DeleteFn={DeleteFn} />
